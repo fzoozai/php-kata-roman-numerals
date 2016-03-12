@@ -2,12 +2,24 @@
 
 class RomanNumeralsConverter
 {
-    public function convert($argument1)
+    public function convert( $argument1 )
     {
-        if($argument1 == 5){
-            return 'V';
+        $solution = '';
+
+        if ( $argument1 >= 10 ) {
+            $solution .= 'X';
+            $argument1 -= 10;
         }
 
-        return str_repeat('I', $argument1);
+        if ( $argument1 >= 5 ) {
+            $solution .= 'V';
+            $argument1 -= 5;
+        }
+
+        $solution .= str_repeat('I', $argument1);
+        return $solution;
     }
 }
+
+
+
