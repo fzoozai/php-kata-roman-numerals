@@ -26,6 +26,19 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
     {
         $this->convert(10)->shouldReturn('X');
     }
+
+    function it_calculates_the_roman_numeral_for_20()
+    {
+        $this->convert(20)->shouldReturn('XX');
+    }
+    function it_calculates_the_roman_numeral_for_50()
+    {
+        $this->convert(50)->shouldReturn('L');
+    }
+    function it_calculates_the_roman_numeral_for_100()
+    {
+        $this->convert(100)->shouldReturn('C');
+    }
 //
 //
 //    function it_calculates_the_roman_numeral_for_112()

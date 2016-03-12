@@ -2,21 +2,31 @@
 
 class RomanNumeralsConverter
 {
-    public function convert( $argument1 )
+    public function convert( $number )
     {
         $solution = '';
 
-        if ( $argument1 >= 10 ) {
+        while ($number >= 100) {
+            $solution .= 'C';
+            $number -= 100;
+        }
+
+        while ($number >= 50) {
+            $solution .= 'L';
+            $number -= 50;
+        }
+
+        while ( $number >= 10 ) {
             $solution .= 'X';
-            $argument1 -= 10;
+            $number -= 10;
         }
 
-        if ( $argument1 >= 5 ) {
+        while ( $number >= 5 ) {
             $solution .= 'V';
-            $argument1 -= 5;
+            $number -= 5;
         }
 
-        $solution .= str_repeat('I', $argument1);
+        $solution .= str_repeat('I', $number);
         return $solution;
     }
 }
