@@ -17,14 +17,29 @@ class RomanNumeralsConverterSpec extends ObjectBehavior
         $this->convert(2)->shouldReturn('II');
     }
 
+    function it_calculates_the_roman_numeral_for_4()
+    {
+        $this->convert(4)->shouldReturn('IV');
+    }
+
     function it_calculates_the_roman_numeral_for_5()
     {
         $this->convert(5)->shouldReturn('V');
     }
 
+    function it_calculates_the_roman_numeral_for_9()
+    {
+        $this->convert(9)->shouldReturn('IX');
+    }
+
     function it_calculates_the_roman_numeral_for_10()
     {
         $this->convert(10)->shouldReturn('X');
+    }
+
+    function it_calculates_the_roman_numeral_for_11()
+    {
+        $this->convert(11)->shouldReturn('XI');
     }
 
     function it_calculates_the_roman_numeral_for_20()
